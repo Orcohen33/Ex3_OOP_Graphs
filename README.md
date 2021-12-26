@@ -24,13 +24,19 @@ The interfaces are :
 ## DiGraph class : Implement GraphInterface
 <details>
   <summary>Click to expand</summary>
+ 
   
-  
-   - In this class I decided to store the vertex data in dict :
+   ##### Each DiGraph contains two fields:
+   - Nodes :
      - Key - Contain vertex id
      - Value - Contain a list of 2 variables: 
-        - Tuple - Position in space (x,y,z)
-        - Int - A variable to to use in algorithms (tag)
+       - Tuple - Position in space (x,y,z)
+       - Int - A variable to to use in algorithms (tag)
+   - Edges :
+     - Key - Contain tuple (src,dest) that represet directed edge.
+     - Value - Contain weight (float)
+  
+  
   
 | *Methods* | *Details* | *Time complexity* |
 |--------------------|-----------|--------|
@@ -47,3 +53,28 @@ The interfaces are :
  
   
 </details>
+
+## GraphAlgo class : implement GraphAlgoInterface
+<details>
+  <summary>Click to expand</summary><br/>
+  
+  This class represents a directed (positive) weighted Graph and implement Theory Algorithms including: init, shortedPath , center , tsp and save&load with JSON file.
+
+  
+ ##### Each GraphAlgo contain DiGraph
+  
+| *Methods* | *Details* | *Time complexity* |
+|--------------------|-----------|--------|
+|`get_graph()`| Return the directed weighted graph on which the algorithms work on|O(1)|
+|`load_from_json`|Return true if load successfuly else false | O(\|V\| + \|E\|) \|V\|=Vertices  \|E\|=Edges|
+|`save_from_json`|Return true if save successfuly else false | O(\|V\| + \|E\|) \|V\|=Vertices  \|E\|=Edges|
+|`shortest_path(id1: int, id2: int)`|Return (float,list) ,float- represent weight of path, list- represent shorest path between id1 to id2| O(\|V\| + \|E\|*Log\|V\|) \|V\|=Vertices  \|E\|=Edges| 
+|`TSP(node_lst: list[int])`|Return (list[int],float) ,list[int] - represent path between all cities, float - represent weight of path |Worst case if the number of edges is \|V\|^2 -> O(V^4)|
+|`centerPoint()`|Return (int,float) ,int - node id of the center ,float - Lowest of all maximum distances|O(\|V\|^2 + \|V\|*\|E\|*Log\|V\|) \|V\|=Vertices  \|E\|=Edges|
+
+  
+</details>
+
+
+
+
