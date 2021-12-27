@@ -86,3 +86,15 @@ The interfaces are :
 |           TSP          |      5s 595ms  |     30s 43ms   |     82s 7ms    |    Out of memory   |
 
 
+## Compare times
+
+We required to compare times between java project to this project
+I made graphs that represent each algorithm with 1k,10k,100k,1m nodes:
+(0 means TimeOut)</br>
+
+![CompareRunningTimes2](https://user-images.githubusercontent.com/92351152/147502207-0d2bd310-a1a3-4442-82b2-b1f25ee36c07.jpg)
+
+
+## How to run
+
+- Open cmd in the project folder ()
