@@ -75,6 +75,14 @@ The interfaces are :
   
 </details>
 
+## Time analysis
 
+
+|                        | 1,000 vertices | 10,000 vertices | 100,000 vertices | 1,000,000 vertices |
+|:----------------------:|:--------------:|:---------------:|:----------------:|:------------------:|
+|       Build Graph      |      36ms      |      1s 586ms   |     22s 873ms    |      30s 135ms     |
+|         Center         |     11m 3ms    |     Timeout     |      Timeout     |       Timeout      |
+|      Shortest Path     |      619ms     |     2s 39ms     |     35s 13ms      |    Out of memory  |
+|           TSP          |      5s 595ms  |     30s 243ms   |     62s 307ms    |    Out of memory   |
 
 
