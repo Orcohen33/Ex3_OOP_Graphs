@@ -1,4 +1,4 @@
-from GraphInterface import *
+from src.GraphInterface import GraphInterface
 
 
 class DiGraph(GraphInterface):

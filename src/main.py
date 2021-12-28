@@ -1,6 +1,8 @@
-# from DiGraph import
-from GraphAlgo import *
+
 import numpy as np
+
+from src.DiGraph import DiGraph
+from src.GraphAlgo import GraphAlgo
 
 
 def check():

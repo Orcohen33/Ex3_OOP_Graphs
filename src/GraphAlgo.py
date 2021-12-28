@@ -2,9 +2,10 @@ import json
 import sys
 from queue import *
 from random import uniform
-from DiGraph import DiGraph
-from GraphAlgoInterface import *
-from GraphInterface import *
+
+from src.DiGraph import DiGraph
+from src.GraphAlgoInterface import GraphAlgoInterface
+from src.GraphInterface import GraphInterface
 import matplotlib.pyplot as plt
 import numpy as np
 
