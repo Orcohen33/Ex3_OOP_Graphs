@@ -71,9 +71,74 @@ The interfaces are :
 |`shortest_path(id1: int, id2: int)`|Return (float,list) ,float- represent weight of path, list- represent shorest path between id1 to id2| O(\|V\| + \|E\|*Log\|V\|) \|V\|=Vertices  \|E\|=Edges| 
 |`TSP(node_lst: list[int])`|Return (list[int],float) ,list[int] - represent path between all cities, float - represent weight of path |Worst case if the number of edges is \|V\|^2 -> O(V^4)|
 |`centerPoint()`|Return (int,float) ,int - node id of the center ,float - Lowest of all maximum distances|O(\|V\|^2 + \|V\|*\|E\|*Log\|V\|) \|V\|=Vertices  \|E\|=Edges|
-
   
+  
+### Algorithm explanation
+  
+  ```shortestPath(id1: int,id2: int)```
+  <details>
+  <summary>Explanation</summary>
+   
+   Checks what is the shortest path distance between given id1,id2∈V , This algorithm used Dijkstra.  
+    
+   Dijkstra check what is the lower weight path to get from u to v.
+   
+   In this program i implemented dijkstra with priority queue , which decrease the time complexity.
+    
+  - What is it actually does?  
+    
+    1. Set the "id1" node weight 0.
+    2. Start to explore his neighbors.
+    3. Therefore, we will see if the weight of the neighbor is greater than the weight of this vertex and the weight of the tip that connects them.
+If so we will change the weight of the neighbor at the vertex weight + the weight of the edge.
+
+    4. Once we come across a neighbour who is also our destination , we will update his weight if necessary and return the weight of the neighbor who is also the destination.
+    5. If the weight isnt -1 it means that there is a path between given source and destination.
+   
+    ![Dijkstra](https://user-images.githubusercontent.com/92351152/145614084-391100ad-325b-4cec-951d-19c9a81dc01e.gif)
+    
+   This algorithm also return the shorest path between id1 to id2 - as an oredered List of nodes :id1 -> v1 -> v2 -> ... -> id2.
+    
+   Time complexity = O(|V|+|E|*Log|V|) -> |V| = size of vertexes , |E| = size of edges.
+    
 </details>
+  
+  ```centerPoint()```
+  
+ <details>
+ <summary>Explanation</summary>
+      
+   The method basically takes vertex 'u' and checks its distance from each vertex 'v' belonging to V
+      
+   and saves the maximum distance from vertex 'u' to 'v' in a data format.
+      
+   This operation is performed on any vertex 'u' belonging to V.
+      
+   Finally we will select the minimum of all maximum distances and also the node id to return it.
+      
+    Time Complexity : O(|V|^4)   |V| - vertexes. (At the worst case if |E|=|V|^2)
+      
+</details>
+  
+  ```TSP(node_lst: list[int])```
+  
+  <details>
+  <summary>Explanation</summary>
+  
+  The TSP algorithm used to look for the shortest path between all given cities and return the path and his weight.
+    
+  The algorithm searches all the paths between u,v ∈ node_lst .
+    
+  If all the nodes in node_lst contain in one of the paths and his weight is the minimized then the algorithm returns it .
+    
+  Else ,  all the ‘mergePaths’ go to helper algorithm that merge the good paths and returns the one with the minimized weight and.
+
+      
+      
+  Time Complexity : O(|V|^4)   |V| - vertexes. (At the worst case if |E|=|V|^2)
+      
+  </details>
+ </details> 
 
 ## Time analysis
 
