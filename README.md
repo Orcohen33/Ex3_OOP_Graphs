@@ -17,6 +17,6 @@
   
   There is two ways to run the program :
   
-  1. Download from releases V0.0.0 and put it in src folder ,then double click on `main.exe`
+  1. Download from releases V0.0.0 and put it in **src** folder ,then double click on `main.exe`
 
   2. Open cmd in src folder and run : `python main.py`
