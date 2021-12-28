@@ -10,7 +10,8 @@
    - Comparing a time measurement between the graph realized here and the graph from the     previous project realized in Java.
 
 
-# Implementaion
+# implementation
+
 
 * We were required in the current project to implements interfaces.
 
