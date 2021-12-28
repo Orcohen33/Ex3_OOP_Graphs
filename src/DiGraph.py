@@ -1,4 +1,4 @@
-from src.GraphInterface import GraphInterface
+from GraphInterface import *
 
 
 class DiGraph(GraphInterface):
@@ -124,29 +124,3 @@ class DiGraph(GraphInterface):
 
     def __repr__(self):
         return f"Graph: |V|={len(self.nodes)} , |E|={len(self.edges)}"
-
-
-if __name__ == '__main__':
-    from random import uniform
-
-    g = DiGraph()
-    for i in range(30):
-        g.add_node(i)
-    for i in range(30):
-        for j in range(1, 3):
-            k = i
-            g.add_edge(i, (i + j) % 30, uniform(1.01, 2.02))
-    g2 = DiGraph()
-    for i in range(45):
-        g2.add_node(i)
-    for i in range(45):
-        for j in range(1, 4):
-            k = i
-            g2.add_edge(i, (i + j) % 45, uniform(1.01, 2.02))
-    g3 = DiGraph()
-    for i in range(60):
-        g3.add_node(i)
-    for i in range(60):
-        for j in range(1, 5):
-            k = i
-            g3.add_edge(i, (i + j) % 60, uniform(1.01, 2.02))

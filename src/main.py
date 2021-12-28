@@ -1,5 +1,6 @@
-from DiGraph import DiGraph
-from GraphAlgo import GraphAlgo
+# from DiGraph import
+from GraphAlgo import *
+import numpy as np
 
 
 def check():
@@ -111,7 +112,6 @@ def check3():
     g.add_edge(3, 4, 2.1)
     g.add_edge(4, 2, .5)
     g_algo = GraphAlgo(g)
-    print("CHECK HERE #################")
     print(g_algo.centerPoint())
     print(g_algo.TSP([1, 2, 4]))
     print()

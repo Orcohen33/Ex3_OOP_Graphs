@@ -1,13 +1,12 @@
 import json
 import sys
 from queue import *
-
-import numpy as np
-import matplotlib.pyplot as plt
 from random import uniform
-from src.DiGraph import DiGraph
-from src.GraphAlgoInterface import GraphAlgoInterface
-from src.GraphInterface import GraphInterface
+from DiGraph import DiGraph
+from GraphAlgoInterface import *
+from GraphInterface import *
+import matplotlib.pyplot as plt
+import numpy as np
 
 
 class GraphAlgo(GraphAlgoInterface):
@@ -190,10 +189,6 @@ class GraphAlgo(GraphAlgoInterface):
                     if all(elem in key for elem in node_lst):
                         dict_ans[pathWeight] = key
                     i += 1
-
-        # if dict_ans.keys().__len__() == 0:
-        #     return [], float('inf')
-        # else :
 
         ans = min(dict_ans.keys())
 
